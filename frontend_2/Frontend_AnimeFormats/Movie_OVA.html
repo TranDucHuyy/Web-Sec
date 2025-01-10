@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ANIMEFORM.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>TRAILER</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="/Frontend_HomePage/HomePage.html"><h1 class="logo">TRAILER</h1></a>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="/Frontend_HomePage/HomePage.html"><li class="menu-list-item active">HOME</li></a>
+                    <li class="menu-list-item active">ANIME FORM
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_AnimeFormats/TV_Series.html"><li class="dropdown-item">TV/Series</li></a>
+                            <a href="/Frontend_AnimeFormats/Movie_OVA.html"><li class="dropdown-item">Movie/Ova</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Comming_Soon.html"><li class="dropdown-item">Coming soon</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Completed.html"><li class="dropdown-item">Completed</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Simulcasting.html"><li class="dropdown-item">Simulcasting</li></a>
+                        </ul>
+                    </li>                     
+                    <li class="menu-list-item active">TOP ANIME
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_AnimeTop/AnimeTop_Date.html"><li class="dropdown-item">Date</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Month.html"><li class="dropdown-item">Month</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Year.html"><li class="dropdown-item">Year</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Rate.html"><li class="dropdown-item">Rate</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_TopFavor.html"><li class="dropdown-item">Favorite</li></a>
+                        </ul>
+                    </li>
+                    <li class="menu-list-item active">GENRE
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_GenrePage/Action.html"><li class="dropdown-item">Action</li></a>
+                            <a href="/Frontend_GenrePage/Drama.html"><li class="dropdown-item">Drama</li></a>
+                            <a href="/Frontend_GenrePage/Comedy.html"><li class="dropdown-item">Comedy</li></a>
+                            <a href="/Frontend_GenrePage/Romance.html"><li class="dropdown-item">Romance</li></a>
+                            <a href="/Frontend_GenrePage/Fantasy.html"><li class="dropdown-item">Fantasy</li></a>
+                        </ul>
+                    </li>
+                    <li class="menu-list-item active">SEASON
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_SeasonPage/Spring2025.html"><li class="dropdown-item">Spring 2025</li></a>
+                            <a href="/Frontend_SeasonPage/Winter2024.html"><li class="dropdown-item">Winter 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Fall2024.html"><li class="dropdown-item">Fall 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Summer2024.html"><li class="dropdown-item">Summer 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Spring2024.html"><li class="dropdown-item">Spring 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Winter2023.html"><li class="dropdown-item">Winter 2023</li></a>
+                        </ul>
+                    </li> 
+                </ul>
+            </div>
+
+            <!-- Tạm thời ẩn -->
+            <!-- <div class="profile-container">
+                <img class="profile-picture" src="img/prof.jpg" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fa-solid fa-sort-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fa-solid fa-moon toggle-icon"></i>
+                    <i class="fa-solid fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Icon của thanh tìm kiếm -->
+        <i class="left-menu-icon fa-solid fa-magnifying-glass" onclick="toggleSearchBar()"></i>
+    
+        <div class="search-container" id="searchBar" style="display: none;">
+            <input type="text" id="searchInput" placeholder="Search for a trailer..." onkeydown="handleKeyDown(event)">
+        </div>
+    
+        <!-- Icon của nút random video -->
+        <i class="left-menu-icon fa-solid fa-random" onclick="playRandomTrailer()"></i>
+    </div>
+    <!-- Viết tiếp từ đây-->
+     <!-- Empty content -->
+     <div class="container">
+        <div class="content-container">
+
+    <!-- Tiêu đề thể loại -->
+    <div class="title">
+        <h1>List of anime in the Movie OVA</h1>
+
+        <!-- Danh sách anime -->
+        <div class="anime-list">
+            <!-- Anime 1 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/level2.jpg" alt="Anime 1">
+                <p>Lv2 kara Cheat</p>
+                <p>Views: 1,415,052</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/level2.html">Watch</a></button>
+            </div>
+        
+            <!-- Anime 2 -->
+            <div class="anime-item">
+                <img src="/Frontend_AnimeTop/img/death_note.jpg" alt="Anime 2">
+                <p>Death Note</p>
+                <p>Views: 108,523</p>
+                <button class="movie-button"><a href="/Frontend_AnimeTop/Top_Playlist/deathnote.html">Watch</a></button>
+            </div>
+        
+            <!-- Anime 3 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/konosuba.jpg" alt="Anime 3">
+                <p>Kono Subarashii Sekai</p>
+                <p>Views: 5,106,273</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/konosuba.html">Watch</a></button>
+            </div>
+        
+            <!-- Anime 4 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/isekaisuicide.jpg" alt="Anime 4">
+                <p>Isekai Suicide Squad</p>
+                <p>Views: 2,106,000</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/isekaisuicide.html">Watch</a></button>
+            </div>
+        
+            <!-- Anime 5 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/okami.jpg" alt="Anime 5">
+                <p>Okami to Koushinryou</p>
+                <p>Views: 4,500,000</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/okami.html">Watch</a></button>
+            </div>
+        
+            <!-- Anime 6 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/hazurewaku.jpg" alt="Anime 6">
+                <p>Hazurewaku no "Joutai Ijou Skill"</p>
+                <p>Views: 1,205,123</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/hazurewaku.html">Watch</a></button>
+            </div>
+        
+            <!-- Anime 7 -->
+            <div class="anime-item">
+                <img src="/Frontend_AnimeTop/img/opm.jpg" alt="Anime 7">
+                <p>One Punch Man</p>
+                <p>Views: 2,300,000</p>
+                <button class="movie-button"><a href="/Frontend_AnimeTop/Top_Playlist/opm.html">Watch</a></button>
+            </div>
+        
+            <!-- Anime 8 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/kaiju.jpg" alt="Anime 8">
+                <p>Kaiju no 8</p>
+                <p>Views: 5,450,000</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/kaiju.html">Watch</a></button>
+            </div>
+        
+            <!-- Anime 9 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/bluelock.jpg" alt="Anime 9">
+                <p>Blue Lock</p>
+                <p>Views: 3,400,000</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/bluelock.html">Watch</a></button>
+            </div>
+
+            <!-- Anime 10 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/heroine.jpg" alt="Anime 10">
+                <p>Make Heroine ga Osugiru</p>
+                <p>Views: 3,400,000</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/heroine.html">Watch</a></button>
+            </div>
+            
+            <!-- Anime 11 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/alyasan.jpg" alt="Anime 11">
+                <p>Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</p>
+                <p>Views: 3,400,000</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/alyasan.html">Watch</a></button>
+            </div>
+
+            <!-- Anime 12 -->
+            <div class="anime-item">
+                <img src="/Frontend_AnimeTop/img/fairy.jpg" alt="Anime 12">
+                <p>Fairy Tail</p>
+                <p>Views: 3,400,000</p>
+                <button class="movie-button"><a href="/Frontend_AnimeTop/Top_Playlist/fairytail.html">Watch</a></button>
+            </div>
+
+            <!-- Anime 13 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/shangri.jpg" alt="Anime 13">
+                <p>Shangri-La Frontier</p>
+                <p>Views: 3,400,000</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/shangri.html">Watch</a></button>
+            </div>
+
+            <!-- Anime 14 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/hazurewaku.jpg" alt="Anime 14">
+                <p>Hazurewaku no "Joutai Ijou Skill"</p>
+                <p>Views: 3,400,000</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/hazurewaku.html">Watch</a></button>
+            </div>
+        
+            <!-- Anime 15 -->
+            <div class="anime-item">
+                <img src="/Frontend_DetailPage/img/dandadan.jpg" alt="Anime 15">
+                <p>Dandadan</p>
+                <p>Views: 7,600,000</p>
+                <button class="movie-button"><a href="/Frontend_DetailPage/dandadan.html">Watch</a></button>
+            </div>
+        </div>
+        
+
+        <!-- Phân trang (Pagination) -->
+        <div class="pagination" current-page="1">
+            <a href="Movie_OVA.html" class="page-link">1</a>
+            <a href="Movie_OVA2.html" class="page-link">2</a>
+           
+        </div>
+        </div>
+    </div>
+    <script src="ANIMEFORM.js"></script>
+</body>
+</html>

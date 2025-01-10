@@ -1,0 +1,404 @@
+*{
+    margin:0;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: #20232a; /* Change this to your desired background color */
+    font-family: 'Roboto', sans-serif; /* Ensure consistency with your font */
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* Optional: Change text color to improve readability */
+}
+
+.bodypart{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #fffafa;
+    color: #3b3939;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: fixed; /* Thanh điều hướng luôn cố định */
+    top: 0; /* Gắn thanh điều hướng ở đầu trang */
+    z-index: 999; /* Đảm bảo thanh điều hướng nằm trên các phần tử khác */
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: "Sen", sans-serif;
+}
+
+.logo-container a{
+    flex: 1;
+    text-decoration: none;
+}
+
+.logo{
+    font-family: "Sen", sans-serif;
+    font: 30px;
+    color: red;
+}
+
+.menu-container a{
+    flex: 6;
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item:hover {
+    background-color: rgba(255, 0, 0, 0.877); 
+    border-radius: 5px; 
+}
+
+.light-mode .menu-container a{
+    flex: 6;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-list-item.active{
+    font-weight: bold;
+}
+
+.menu-list-item {
+    margin-right: 30px;
+    padding: 10px 20px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.search-container {
+    position: absolute;
+    top: 51px; 
+    left: 50px; 
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.search-container input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    width: 200px; 
+}
+
+.sidebar.active{
+    background-color: white;
+}
+
+.left-menu-icon{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+    transition: transform 0.7s ease-in-out;
+}
+
+.left-menu-icon:hover{
+    color:red;
+    transform: rotate(360deg);
+}
+
+.container{
+    background-color: #303030;
+    min-height: calc(100vh - 50px);
+    width: 100%;        
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; /* Optional: Adjust padding */
+}
+
+.content-container{
+    margin-left: 0%;
+    width: 100%;
+    display: flex;
+}
+
+.container.active{
+    background-color: white;
+}
+
+.navbar-container.active{
+    background-color: white;
+    color: black;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+
+/* Dropdown Styles */
+.dropdown-menu {
+    width: 150px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.menu-list-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    font-size: 13px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+    width: 100%;
+}
+
+.dropdown-item a {
+    display: block; /* Đảm bảo rằng cả khu vực liên kết bao phủ toàn bộ vùng của item /
+    padding: 10px 20px; / Khoảng cách bên trong của mục /
+    color: white; / Màu chữ mặc định /
+    text-decoration: none; / Bỏ gạch chân /
+}
+
+.dropdown-item a:hover {
+    color: white; / Đảm bảo màu chữ khi hover */
+}
+
+.dropdown-item:hover {
+    background-color: red;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+/*========================Dropdown========================*/
+
+.left-menu-icon{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+    transition: transform 0.7s ease-in-out;
+}
+
+.left-menu-icon:hover{
+    color:red;
+    transform: rotate(360deg);
+}
+
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 0; /* Sidebar width + some margin */
+    padding: 50px 0px 0px 0px; /* Top padding to avoid navbar */
+    text-align: center;
+    margin-right: 0;
+    margin-left: 50px;
+    padding: 80px 20px 20px 20px;
+  
+}
+
+/* Movie List Section */
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap; /* This will wrap the items to the next row if there's not enough space */
+    justify-content: center; /* Adjusts the space between items */
+}
+
+/* Movie Item Styling */
+.movie-item {
+    border: 1px solid #a42727; /* Red border */
+    padding: 10px;
+    background-color: #ac0f0f; /* Dark red background */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.movie-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Light shadow */
+}
+
+/* Poster Image */
+.movie-item img {
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Movie Title */
+.movie-title {
+    font-size: 1.2rem;
+    color:aliceblue;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Movie Description */
+.movie-description {
+    font-size: 0.9rem;
+    color: white !important; /* Ensures white color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu-container {
+        display: none; /* Hide menu on small screens */
+    }
+
+    .main-content {
+        margin-left: 70px;
+        padding: 80px 10px 10px 10px;
+    }
+}
+
+
+.content-container{
+    margin-left: 50px;
+}
+
+.navbar-container.active{
+    background-color: white;
+    color: black;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+/* Main Content Styles */
+
+.season-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center; /* This centers the heading */
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #ff6347;
+}
+
+
+
+
+/* Anime Season List */
+.anime-season-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột có kích thước bằng nhau */
+    gap: 30px; /* Khoảng cách giữa các cột */
+    justify-content: center; /* Căn giữa các cột */
+    width: 90%; /* Đảm bảo độ rộng container không chiếm toàn bộ trang */
+    margin: 20px auto; /* Căn giữa container trong trang */
+    margin-left: 30px;
+    padding: 10px; /* Khoảng cách bên trong của container */
+}
+
+/* Anime Card */
+.anime-card {
+    background-color: #000000;
+    border-radius: 20px;
+    box-shadow: 0 20px 160px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%; /* Đảm bảo các thẻ anime chiếm toàn bộ chiều rộng của cột */
+    max-width: 250px; /* Đặt giới hạn chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa các thẻ anime */
+    height: auto;
+}
+
+.anime-card img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng thẻ */
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.anime-card:hover {
+    transform: scale(1.05);
+}
+
+.anime-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.anime-card a {
+    color: #81f7d2; /* Match the card theme or any desired color */
+    text-decoration: none; /* Remove underline */
+}
+
+.anime-card a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.anime-details {
+    padding: 15px;
+}
+
+.anime-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0 0 10px;
+}
+
+.anime-description {
+    font-size: 1rem;
+    color: #d8d8d8
+}
+
+.movie-button{
+    padding: 10px 20px;
+    background-color: red;
+    margin: 15px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: 100ms all ease-in-out;
+}
+
+.movie-button:hover{
+    background-color: darkred;
+}
+
+.movie-button a{
+    text-decoration: none;
+    color: white;
+}
+

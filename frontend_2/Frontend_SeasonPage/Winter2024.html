@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SEASON.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Anime Season List - Winter 2024</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="/Frontend_HomePage/HomePage.html"><h1 class="logo">TRAILER</h1></a>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="/Frontend_HomePage/HomePage.html"><li class="menu-list-item active">HOME</li></a>
+                    <li class="menu-list-item active">ANIME FORM
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_AnimeFormats/TV_Series.html"><li class="dropdown-item">TV/Series</li></a>
+                            <a href="/Frontend_AnimeFormats/Movie_OVA.html"><li class="dropdown-item">Movie/Ova</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Comming_Soon.html"><li class="dropdown-item">Coming soon</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Completed.html"><li class="dropdown-item">Completed</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Simulcasting.html"><li class="dropdown-item">Simulcasting</li></a>
+                        </ul>
+                    </li> 
+                    <li class="menu-list-item active">TOP ANIME
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_AnimeTop/AnimeTop_Date.html"><li class="dropdown-item">Date</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Month.html"><li class="dropdown-item">Month</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Year.html"><li class="dropdown-item">Year</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Rate.html"><li class="dropdown-item">Rate</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_TopFavor.html"><li class="dropdown-item">Favorite</li></a>
+                        </ul>
+                    </li>
+                    <li class="menu-list-item active">GENRE
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_GenrePage/Action.html"><li class="dropdown-item">Action</li></a>
+                            <a href="/Frontend_GenrePage/Drama.html"><li class="dropdown-item">Drama</li></a>
+                            <a href="/Frontend_GenrePage/Comedy.html"><li class="dropdown-item">Comedy</li></a>
+                            <a href="/Frontend_GenrePage/Romance.html"><li class="dropdown-item">Romance</li></a>
+                            <a href="/Frontend_GenrePage/Fantasy.html"><li class="dropdown-item">Fantasy</li></a>
+                        </ul>
+                    </li>
+                    <li class="menu-list-item active">SEASON
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_SeasonPage/Spring2025.html"><li class="dropdown-item">SPRING 2025</li></a>
+                            <a href="/Frontend_SeasonPage/Winter2024.html"><li class="dropdown-item">WINTER 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Fall2024.html"><li class="dropdown-item">FALL 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Summer2024.html"><li class="dropdown-item">SUMMER 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Spring2024.html"><li class="dropdown-item">SPRING 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Winter2023.html"><li class="dropdown-item">WINTER 2023</li></a>
+                        </ul>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+   
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Icon của thanh tìm kiếm -->
+            <i class="left-menu-icon fa-solid fa-magnifying-glass" onclick="toggleSearchBar()"></i>
+        
+            <div class="search-container" id="searchBar" style="display: none;">
+                <input type="text" id="searchInput" placeholder="Search for a trailer..." onkeydown="handleKeyDown(event)">
+            </div>
+        
+            <!-- Icon của nút random video -->
+            <i class="left-menu-icon fa-solid fa-random" onclick="playRandomTrailer()"></i>
+        </div>
+        
+ <div class="main-content">
+        <!-- Anime Season List -->
+        <div class="main-content">
+            <h1 class="season-heading">Anime of the Season: Winter 2024</h1>
+        
+        <div class="anime-season-container">
+            <!-- Anime cards go here -->
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/suzume.jpg" alt="suzume">
+                <div class="anime-details">
+                    <h3 class="anime-title">Suzume</h3>
+                    <p class="anime-description">
+                        On her way to school one day, Suzume Iwato stumbles upon Souta Munakata, a young man searching for abandoned areas. The high school girl directs Souta to a nearby ruin, but out of pure curiosity, she herself decides to head to the same destination.
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong>
+                        <a href="/Frontend_GenrePage/Romance.html">Romance</a>
+                       </p>
+                       <button class="movie-button"><a href="/Frontend_SeasonPage/Detail_for_season/suzume.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 8.5</p>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/tenki.jpg" alt="tenki">
+                <div class="anime-details">
+                    <h3 class="anime-title">Tenki no Ko</h3>
+                    <p class="anime-description">
+                        Tokyo is currently experiencing rain showers that seem to disrupt the usual pace of everyone living there to no end.                     </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Romance.html">Romance</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_SeasonPage/Detail_for_season/tenki.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 8.7</p>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/kiminonawa.jpg" alt="kimi">
+                <div class="anime-details">
+                    <h3 class="anime-title">Kimi no Nawa</h3>
+                    <p class="anime-description">
+                        Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside.
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Action.html">Action</a>, 
+                        <a href="/Frontend_GenrePage/Romance.html">Romance</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_SeasonPage/Detail_for_season/yourname.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 9.4</p>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/horimiya.jpg" alt="hori">
+                <div class="anime-details">
+                    <h3 class="anime-title">Horimiya</h3>
+                    <p class="anime-description">
+                        Denji is a young man with a debt to pay, so he becomes a devil hunter for the Yakuza. When he is betrayed, he merges with his pet devil Pochita to become Chainsaw Man.
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Romance.html">Romance</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_SeasonPage/Detail_for_season/horimiya.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 9.0</p>
+                </div>
+            </div>
+
+        
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/lie4.jpg" alt="lie4">
+                <div class="anime-details">
+                    <h3 class="anime-title">Your Lie in April</h3>
+                    <p class="anime-description">
+                        Kousei Arima is a child prodigy known as the "Human Metronome" for playing the piano with precision and perfection.
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Romance.html">Romance</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_SeasonPage/Detail_for_season/lieapril.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 7.5</p>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/pancreas.jpg" alt="pancreas">
+                <div class="anime-details">
+                    <h3 class="anime-title">I Want To Eat Your Pancreas</h3>
+                    <p class="anime-description">
+                        The aloof protagonist: a bookworm who is deeply detached from the world he resides in. He has no interest in others and is firmly convinced that nobody has any interest in him either.                     </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Romance.html">Romance</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_SeasonPage/Detail_for_season/pancreas.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> </p>
+                </div>
+            </div>
+
+         <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/koenokatachi.jpg" alt="koenokat">
+                <div class="anime-details">
+                    <h3 class="anime-title">Koe no Katachi</h3>
+                    <p class="anime-description">
+                        As a wild youth, elementary school student Shouya Ishida sought to beat boredom in the cruelest ways.                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Romance.html">Romance</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_SeasonPage/Detail_for_season/koeka.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 9.6</p>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/5cm.jpg" alt="5cm">
+                <div class="anime-details">
+                    <h3 class="anime-title">5 Centimeters per Second                    </h3>
+                    <p class="anime-description">
+                        The film consists of three segments, each following a period in the life of the protagonist Takaki Tōno and his relationships with the girls around him.                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Romance.html">Romance</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_SeasonPage/Detail_for_season/5cm.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 8.8</p>
+                </div>
+            </div>
+
+   
+
+            <!-- Add more anime-card divs for other anime in the season list -->
+        </div>
+    </div>
+
+    <script src="SEASON.js"></script>
+</body>
+</html>

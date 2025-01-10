@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SEASON.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Anime Season List - Fall 2024</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="/Frontend_HomePage/HomePage.html"><h1 class="logo">TRAILER</h1></a>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="/Frontend_HomePage/HomePage.html"><li class="menu-list-item active">HOME</li></a>
+                    <li class="menu-list-item active">ANIME FORM
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_AnimeFormats/TV_Series.html"><li class="dropdown-item">TV/Series</li></a>
+                            <a href="/Frontend_AnimeFormats/Movie_OVA.html"><li class="dropdown-item">Movie/Ova</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Comming_Soon.html"><li class="dropdown-item">Coming soon</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Completed.html"><li class="dropdown-item">Completed</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Simulcasting.html"><li class="dropdown-item">Simulcasting</li></a>
+                        </ul>
+                    </li> 
+                    <li class="menu-list-item active">TOP ANIME
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_AnimeTop/AnimeTop_Date.html"><li class="dropdown-item">Date</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Month.html"><li class="dropdown-item">Month</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Year.html"><li class="dropdown-item">Year</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Rate.html"><li class="dropdown-item">Rate</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_TopFavor.html"><li class="dropdown-item">Favorite</li></a>
+                        </ul>
+                    </li>
+                    <li class="menu-list-item active">GENRE
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_GenrePage/Action.html"><li class="dropdown-item">Action</li></a>
+                            <a href="/Frontend_GenrePage/Drama.html"><li class="dropdown-item">Drama</li></a>
+                            <a href="/Frontend_GenrePage/Comedy.html"><li class="dropdown-item">Comedy</li></a>
+                            <a href="/Frontend_GenrePage/Romance.html"><li class="dropdown-item">Romance</li></a>
+                            <a href="/Frontend_GenrePage/Fantasy.html"><li class="dropdown-item">Fantasy</li></a>
+                        </ul>
+                    </li>
+                    <li class="menu-list-item active">SEASON
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_SeasonPage/Spring2025.html"><li class="dropdown-item">SPRING 2025</li></a>
+                            <a href="/Frontend_SeasonPage/Winter2024.html"><li class="dropdown-item">WINTER 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Fall2024.html"><li class="dropdown-item">FALL 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Summer2024.html"><li class="dropdown-item">SUMMER 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Spring2024.html"><li class="dropdown-item">SPRING 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Winter2023.html"><li class="dropdown-item">WINTER 2023</li></a>
+                        </ul>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+   
+    <div class="sidebar">
+        <!-- Icon của thanh tìm kiếm -->
+        <i class="left-menu-icon fa-solid fa-magnifying-glass" onclick="toggleSearchBar()"></i>
+    
+        <div class="search-container" id="searchBar" style="display: none;">
+            <input type="text" id="searchInput" placeholder="Search for a trailer..." onkeydown="handleKeyDown(event)">
+        </div>
+    
+        <!-- Icon của nút random video -->
+        <i class="left-menu-icon fa-solid fa-random" onclick="playRandomTrailer()"></i>
+    </div>
+    
+    
+        <!-- Icon của nút random video -->
+        <i class="left-menu-icon fa-solid fa-random" onclick="playRandomTrailer()"></i>
+    </div>
+ <div class="main-content">
+        <!-- Anime Season List -->
+        <div class="main-content">
+            <h1 class="season-heading">Anime of the Season: Fall 2024</h1>
+
+        <div class="anime-season-container">
+            <!-- Anime Card -->
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/bluelock.jpg" alt="Blue Lock">
+                <div class="anime-details">
+                    <h3 class="anime-title">Blue Lock</h3>
+                    <p class="anime-description">
+                        The story begins with Japan's elimination from the 2018 FIFA World Cup, which prompts the Japanese Football Union to start a programme scouting high school players.
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong>
+                         <a href="/Frontend_GenrePage/Action.html">Action</a>, 
+                        <a href="/Frontend_GenrePage/Drama.html">Drama</a>
+                       </p>
+                       <button class="movie-button"><a href="/Frontend_DetailPage/bluelock.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 8.5</p>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/chainsawman.jpg" alt="Chainsaw Man">
+                <div class="anime-details">
+                    <h3 class="anime-title">Chainsaw Man</h3>
+                    <p class="anime-description">
+                        Denji is a young man with a debt to pay, so he becomes a devil hunter for the Yakuza. When he is betrayed, he merges with his pet devil Pochita to become Chainsaw Man.
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Comedy.html">Comedy</a>, 
+                        <a href="/Frontend_GenrePage/Drama.html">Drama</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_SeasonPage/Detail_for_season/chainsaw.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 9.0</p>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/mha.jpg" alt="My Hero Academia: Season 6">
+                <div class="anime-details">
+                    <h3 class="anime-title">My Hero Academia: Season 6</h3>
+                    <p class="anime-description">
+                        The story follows a group of students training to become heroes in a world where superpowers are common.
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Action.html">Action</a>, 
+                        <a href="/Frontend_GenrePage/Fantasy.html">Fantasy</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_DetailPage/mha.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 8.7</p>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/kny.jpg" alt="KNY">
+                <div class="anime-details">
+                    <h3 class="anime-title">Kimetsu no Yaiba</h3>
+                    <p class="anime-description">
+                        After a series of mighty clashes with Upper Rank Demons, the Ubuyashiki clan prepares for one last battle with the hellish forces of Muzan Kibutsuji. 
+
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Action.html">Action</a>, 
+                        <a href="/Frontend_GenrePage/Fantasy.html">Fantasy</a>,
+                        <a href="/Frontend_GenrePage/Comedy.html">Comedy</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_DetailPage/kimetsu.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 9.4</p>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/rezero.jpg" alt="REZERO">
+                <div class="anime-details">
+                    <h3 class="anime-title">Re:Zero kara Hajimeru Isekai Seikatsu 3rd Season</h3>
+                    <p class="anime-description">
+                        Third season of Re:Zero kara Hajimeru Isekai Seikatsu.
+
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Romance.html">Romance</a>, 
+                        <a href="/Frontend_GenrePage/Fantasy.html">Fantasy</a>,
+                        <a href="/Frontend_GenrePage/Comedy.html">Comedy</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_DetailPage/rezero.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 7.5</p>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/DBdaima.jpg" alt="DBDAIMA">
+                <div class="anime-details">
+                    <h3 class="anime-title">Dragon Ball - Daima</h3>
+                    <p class="anime-description">
+                        Dragon Ball presents a new series “Dragon Ball DAIMA” in honor of its 40th anniversary, featuring new characters and visuals.
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Action.html">Action</a>, 
+                        <a href="/Frontend_GenrePage/Comedy.html">Comedy</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_SeasonPage/Detail_for_season/dragonball.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 7.8</p>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/spyxfam.jpg" alt="spyxfam">
+                <div class="anime-details">
+                    <h3 class="anime-title">Spy X Family</h3>
+                    <p class="anime-description">
+                        With her ability to read minds, Anya Forger is the only one who knows the true identities of her unconventional family.
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Action.html">Action</a>, 
+                        <a href="/Frontend_GenrePage/Comedy.html">Comedy</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_DetailPage/spyfamily.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 8.8</p>
+                    <button class="movie-button"><a href="/Frontend_AnimeTop/Top_Playlist/spy.html">Watch</a></button>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <img src="/Frontend_SeasonPage/img/mushoku.jpg" alt="mushoku">
+                <div class="anime-details">
+                    <h3 class="anime-title">Mushoku Tensei</h3>
+                    <p class="anime-description">
+                        The series is about a jobless overweight man who dies after having a withdrawn life and reincarnates in a fantasy world while keeping his memories of his previous life
+                    </p>
+                    <p class="anime-genre"><strong>Genres:</strong> 
+                        <a href="/Frontend_GenrePage/Action.html">Action</a>, 
+                        <a href="/Frontend_GenrePage/Fantasy.html">Fantasy</a>,
+                        <a href="/Frontend_GenrePage/Comedy.html">Comedy</a>
+                    </p>
+                    <button class="movie-button"><a href="/Frontend_DetailPage/mushoku.html">Watch</a></button>
+                    <p class="anime-rating"><strong>Rating:</strong> 9.0</p>
+                </div>
+            </div>
+
+            <!-- Add more anime-card divs for other anime in the season list -->
+        </div>
+    </div>
+    
+
+    <script src="SEASON.js"></script>
+</body>
+</html>

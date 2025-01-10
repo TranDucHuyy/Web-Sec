@@ -1,0 +1,462 @@
+*{
+    margin:0;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: fixed; /* Thanh điều hướng luôn cố định */
+    top: 0; /* Gắn thanh điều hướng ở đầu trang */
+    z-index: 999; /* Đảm bảo thanh điều hướng nằm trên các phần tử khác */
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: "Sen", sans-serif;
+}
+
+.logo-container a{
+    flex: 1;
+    text-decoration: none;
+}
+
+.logo{
+    font-family: "Sen", sans-serif;
+    font: 30px;
+    color: red;
+}
+
+.menu-container a{
+    flex: 6;
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+
+.light-mode .menu-container a{
+    flex: 6;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-list-item {
+    margin-right: 30px;
+    padding: 10px 20px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Hover effect cho dark mode */
+.menu-list-item:hover {
+    background-color: rgba(255, 0, 0, 0.877); 
+    border-radius: 5px; 
+}
+
+/* Hover effect cho light mode */
+.light-mode .menu-list-item:hover {
+    background-color: rgba(255, 0, 0, 0.877); 
+    color: black; 
+    border-radius: 5px;
+}
+
+.menu-list-item.active{
+    font-weight: bold;
+}
+
+.profile-container{
+    flex: 2 ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-container{
+    margin: 0 20px
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+.toggle-icon {
+    color: goldenrod;
+}
+
+.toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle.active {
+    background-color: black;
+}
+
+.toggle-ball.active {
+    background-color: white;
+    transform: translateX(-20px);
+}
+
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.search-container {
+    position: absolute;
+    top: 51px; 
+    left: 50px; 
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.search-container input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    width: 200px; 
+}
+
+.sidebar.active{
+    background-color: white;
+}
+
+.left-menu-icon{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+    transition: transform 0.7s ease-in-out;
+}
+
+.left-menu-icon:hover{
+    color:red;
+    transform: rotate(360deg);
+}
+
+.container{
+    background-color: #151515;
+    /* min-height: calc(100vh); */
+    height:100vh;
+    width: 100%;        
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container{
+    margin-left: 50px;
+}
+
+.container.active{
+    background-color: white;
+}
+
+.navbar-container.active{
+    background-color: white;
+    color: black;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+/* Light mode adjustments */
+.light-mode .navbar {
+    background-color: white;
+}
+
+.light-mode .navbar-container {
+    color: black;
+}
+
+.light-mode .toggle-ball {
+    background-color: black;
+}
+
+
+
+
+.-container{
+    padding: 20px;
+}
+
+
+
+/*=================Dropdown của Tuấn====================*/
+.dropdown-menu {
+    width: 150px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.menu-list-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    font-size: 13px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+    width: 100%;
+}
+
+.dropdown-item a {
+    display: block; /* Đảm bảo rằng cả khu vực liên kết bao phủ toàn bộ vùng của item /
+    padding: 10px 20px; / Khoảng cách bên trong của mục /
+    color: white; / Màu chữ mặc định /
+    text-decoration: none; / Bỏ gạch chân /
+}
+
+.dropdown-item a:hover {
+    color: white; / Đảm bảo màu chữ khi hover */
+}
+
+.dropdown-item:hover {
+    background-color: red;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+/*========================Dropdown========================*/
+
+
+/*========================DetailPage========================*/
+
+.detail-container {
+    display: flex;
+    background-color: #2e2d31;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    height: 400px;
+}
+
+.movie-details {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-poster img {
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.detail-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.detail-rating {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.detail-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* New styling for horizontal alignment */
+.detail-horizontal {
+    display: flex;
+    justify-content: space-between; /* Ensures space between the items */
+    gap: 30px; /* Adds space between each section */
+    margin-bottom: 20px;
+}
+
+.detail-rank, .detail-popularity, .detail-member {
+    font-size: 14px;
+    flex: 1;
+}
+
+.list-buttons {
+    display: flex;
+    gap: 10px; /* in case adding more button */
+}
+
+.detail-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.detail-button:hover {
+    background-color: rgb(187, 0, 0);
+}
+
+.detail-button-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* .youtube-player-overlay{
+    position: fixed;
+    inset : 0;
+    background: rgba(0,0,0,6);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.youtube-player-overlay.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.youtube-player-popup{
+    position:fixed;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    transition: all 400ms ease;
+}
+
+.youtube-player-overlay.active .youtube-player-popup{
+    transform: translate(-50%,0)
+}
+
+.youtube-player-popup iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+} */
+
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.popup-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.video-container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .video-container {
+        width: 90%;
+        padding-top: 56.25%; 
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .video-container {
+        width: 700px;
+        /* height: 393.75px;  */
+        aspect-ratio: 16/9;
+        
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .video-container {
+        width: 1200px;
+        /* height: 450px;  */
+        aspect-ratio: 16/9;
+    }
+}
+/* add this to .container if update */
+    /* margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; */

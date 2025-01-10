@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DetailPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>TRAILER ANIME</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="/Frontend_HomePage/HomePage.html"><h1 class="logo">TRAILER</h1></a>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="/Frontend_HomePage/HomePage.html"><li class="menu-list-item active">HOME</li></a>
+                    <li class="menu-list-item active">ANIME FORM
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_AnimeFormats/TV_Series.html"><li class="dropdown-item">TV/Series</li></a>
+                            <a href="/Frontend_AnimeFormats/Movie_OVA.html"><li class="dropdown-item">Movie/Ova</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Comming_Soon.html"><li class="dropdown-item">Coming soon</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Completed.html"><li class="dropdown-item">Completed</li></a>
+                            <a href="/Frontend_AnimeFormats/Anime_Simulcasting.html"><li class="dropdown-item">Simulcasting</li></a>
+                        </ul>
+                    </li> 
+                    <li class="menu-list-item active">TOP ANIME
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_AnimeTop/AnimeTop_Date.html"><li class="dropdown-item">Date</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Month.html"><li class="dropdown-item">Month</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Year.html"><li class="dropdown-item">Year</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_Rate.html"><li class="dropdown-item">Rate</li></a>
+                            <a href="/Frontend_AnimeTop/AnimeTop_TopFavor.html"><li class="dropdown-item">Favorite</li></a>
+                        </ul>
+                    </li>
+                    <li class="menu-list-item active">GENRE
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_GenrePage/Action.html"><li class="dropdown-item">Action</li></a>
+                            <a href="/Frontend_GenrePage/Drama.html"><li class="dropdown-item">Drama</li></a>
+                            <a href="/Frontend_GenrePage/Comedy.html"><li class="dropdown-item">Comedy</li></a>
+                            <a href="/Frontend_GenrePage/Romance.html"><li class="dropdown-item">Romance</li></a>
+                            <a href="/Frontend_GenrePage/Fantasy.html"><li class="dropdown-item">Fantasy</li></a>
+                        </ul>
+                    </li>
+                    <li class="menu-list-item active">SEASON
+                        <ul class="dropdown-menu">
+                            <a href="/Frontend_SeasonPage/Spring2025.html"><li class="dropdown-item">Spring 2025</li></a>
+                            <a href="/Frontend_SeasonPage/Winter2024.html"><li class="dropdown-item">Winter 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Fall2024.html"><li class="dropdown-item">Fall 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Summer2024.html"><li class="dropdown-item">Summer 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Spring2024.html"><li class="dropdown-item">Spring 2024</li></a>
+                            <a href="/Frontend_SeasonPage/Winter2023.html"><li class="dropdown-item">Winter 2023</li></a>
+                        </ul>
+                    </li> 
+                </ul>
+            </div>
+
+            <!-- Tạm thời ẩn -->
+            <!-- <div class="profile-container">
+                <img class="profile-picture" src="img/prof.jpg" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fa-solid fa-sort-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fa-solid fa-moon toggle-icon"></i>
+                    <i class="fa-solid fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <i class="left-menu-icon fa-solid fa-magnifying-glass" onclick="toggleSearchBar()"></i>
+
+        <div class="search-container" id="searchBar" style="display: none;">
+            <input type="text" id="searchInput" placeholder="Search for a trailer..." onkeydown="handleKeyDown(event)">
+        </div> 
+        <i class="left-menu-icon fa-solid fa-random" onclick="playRandomTrailer()"></i>
+        <!-- <i class="left-menu-icon fa-solid fa-bookmark"></i> -->
+    </div>
+
+    <!-- Featured Content -->
+    <div class="container">
+        <div class="detail-container">
+            <div class="movie-details">
+                <div class="detail-title">Dandadan</div>
+                <div class="detail-rating">RATING: 8.71</div>
+                <div class="detail-description">
+                    After being aggressively rejected, Momo Ayase finds herself sulking when she stumbles across a boy being bullied. Saved by her rash kindness, the alien-obsessed boy attempts to speak to her about extraterrestrial interests he believes they share. Rejecting his claims, Ayase proclaimed that she instead is a believer in ghosts, starting an argument between the two over which is real.
+
+In a bet to determine who is correct, the two decide to separately visit locations associated with both the extraterrestrial and the supernatural—Ayase visiting the former and the boy visiting the latter. When the two reach their respective places, it turns out that neither was wrong and that both aliens and ghosts do exist.
+
+This marks the beginning of Ayase and the boy's adventure, as they attempt to fix the surreal, supernatural, and extraterrestrial elements around them to return to a normal life.
+
+                </div>
+                
+                <!-- Horizontal alignment of Genre, Director, and Producer -->
+                <div class="detail-horizontal">
+                    <div class="detail-rank">
+                        <strong>RANK:</strong><br>
+                        61
+                    </div>
+                    <div class="detail-popularity">
+                        <strong>POPULARITY:</strong><br>
+                        1239
+                    </div>
+                    <div class="detail-member">
+                        <strong>MEMBER:</strong><br>
+                        202,427
+                    </div>
+                </div>
+    
+                <div class="list-buttons">
+                    <button class="detail-button" id="popup-button">
+                        <img class="detail-button-icon" src="img/playbutton.png" alt="Play">
+                        Play
+                    </button>
+                </div>
+            </div>
+            <div class="movie-poster">
+                <img src="img/dandadan.jpg" alt="Poster">
+            </div>
+        </div>
+
+            <!-- <button id="popup-button" class="detail-button">
+                <svg viewBox="0 0 24 24">
+                    <path fill="#ffffff" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                </svg>
+                Watch Now
+            </button>-->
+        
+            <div id="popup-container" class="popup-container">
+                <span class="close-button" onclick="closePopup()">X</span>
+                <div class="video-container">
+                    <iframe id="youtube-iframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>       
+    </div>
+    
+    <script src="DetailPage.js"></script>
+    <script>
+        function openPopup(videoId) {
+            var popupContainer = document.getElementById('popup-container');
+            var youtubeIframe = document.getElementById('youtube-iframe');
+
+            youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
+            popupContainer.classList.add('show');
+        }
+
+        function closePopup() {
+            var popupContainer = document.getElementById('popup-container');
+            var youtubeIframe = document.getElementById('youtube-iframe');
+
+            youtubeIframe.src = "";
+            popupContainer.classList.remove('show');
+        }
+
+        var popupButton = document.getElementById('popup-button');
+        popupButton.addEventListener('click', function() {
+            openPopup("V3xNYDFsnN8");
+        });
+    </script>
+</body>
+</html>
