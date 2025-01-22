@@ -7,10 +7,6 @@ const container = document.querySelector(".container");
 const google_signin_btn = document.querySelector("#google-login-btn");
 const github_signin_btn = document.querySelector("#github-login-btn");
 
-// Nút Google và GitHub trong phần Sign Up (nếu có)
-const google_signup_btn = document.querySelector("#google-signup-btn");
-const github_signup_btn = document.querySelector("#github-signup-btn");
-
 // Thêm sự kiện để chuyển đổi giữa Sign In và Sign Up
 sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
